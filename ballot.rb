@@ -19,5 +19,12 @@ ballots.each do |ballot|
     end
   end
 end
-
+puts "\nHere are the tally for each politician."
 p politician
+
+# tally up and determine the winner
+winner = politician.max_by do |candidate, points|
+  points
+end
+
+puts "\nThe winner is #{ winner[0] } with #{ winner[1]} points"
